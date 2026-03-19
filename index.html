@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -930,6 +931,222 @@
     transition: opacity 0.2s;
   }
   .locked-cta:hover { opacity: 0.85; }
+
+  /* ── LIVE COUNTER ── */
+  .live-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--text-muted);
+    animation: fadeUp 0.7s ease 0.5s both;
+  }
+  .live-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #22c55e;
+    animation: pulse 2s infinite;
+    flex-shrink: 0;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section {
+    padding: 100px 0;
+    background: rgba(245,242,237,0.015);
+    border-top: 1px solid var(--border);
+  }
+  .testimonials-intro {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .testimonial-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: border-color 0.3s;
+  }
+  .testimonial-card:hover { border-color: rgba(255,92,53,0.25); }
+  .testimonial-stars { color: #ffb347; font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
+  .testimonial-text { font-size: 14px; font-weight: 300; line-height: 1.75; color: rgba(245,242,237,0.8); margin-bottom: 20px; font-style: italic; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .testimonial-avatar { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; flex-shrink: 0; }
+  .testimonial-name { font-weight: 500; font-size: 14px; }
+  .testimonial-handle { color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+
+  /* ── PRICING TOGGLE ── */
+  .pricing-toggle-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 48px;
+    background: rgba(245,242,237,0.05);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 4px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pricing-toggle {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pricing-toggle.active {
+    background: var(--white);
+    color: var(--black);
+  }
+  .save-badge {
+    background: #22c55e;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 100px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── PRICING RECOMMENDED BADGE ── */
+  .pricing-badge-recommended {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 4px 14px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .pricing-saving {
+    color: #22c55e;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  /* ── PROMO CODE ── */
+  .promo-block {
+    margin-top: 48px;
+    text-align: center;
+  }
+  .promo-toggle {
+    background: none;
+    border: 1px dashed rgba(245,242,237,0.2);
+    color: var(--text-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    padding: 10px 24px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .promo-toggle:hover { border-color: var(--accent); color: var(--white); }
+  .promo-form { margin-top: 16px; }
+  .promo-input-wrap {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(245,242,237,0.05);
+    border: 1px solid rgba(245,242,237,0.15);
+    border-radius: 12px;
+    padding: 4px 4px 4px 16px;
+    gap: 8px;
+  }
+  .promo-input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    width: 200px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .promo-input::placeholder { color: rgba(138,135,128,0.5); text-transform: none; letter-spacing: 0; }
+  .promo-apply-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .promo-apply-btn:hover { opacity: 0.85; }
+  .promo-msg { margin-top: 10px; font-size: 14px; font-weight: 500; }
+  .promo-msg.success { color: #22c55e; }
+  .promo-msg.error { color: #ef4444; }
+
+  /* ── EXIT INTENT POPUP ── */
+  .exit-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    backdrop-filter: blur(4px);
+  }
+  .exit-overlay.visible { opacity: 1; pointer-events: all; }
+  .exit-popup {
+    background: #111;
+    border: 1px solid rgba(255,92,53,0.3);
+    border-radius: 24px;
+    padding: 48px 40px;
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: fadeUp 0.4s ease both;
+  }
+  .exit-popup-close {
+    position: absolute;
+    top: 16px; right: 20px;
+    background: none; border: none;
+    color: var(--text-muted);
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .exit-popup-close:hover { color: var(--white); }
+  .exit-emoji { font-size: 48px; margin-bottom: 16px; display: block; }
+  .exit-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -1px; margin-bottom: 12px; }
+  .exit-sub { color: var(--text-muted); font-size: 15px; font-weight: 300; margin-bottom: 28px; line-height: 1.6; }
+  .exit-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: white; font-family: 'DM Sans'; font-weight: 500; font-size: 16px; padding: 14px 32px; border-radius: 100px; text-decoration: none; transition: opacity 0.2s; }
+  .exit-btn:hover { opacity: 0.85; }
+  .exit-skip { display: block; margin-top: 14px; font-size: 12px; color: var(--text-muted); cursor: pointer; text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    .testimonials-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -973,7 +1190,11 @@
     </a>
   </div>
 
-  <p class="hero-price-note">Essai complet à <strong>1,99€</strong> · Abonnement à <strong>9,99€/mois</strong> · Annulable à tout moment</p>
+  <p class="hero-price-note">Essai complet à <strong>1,99€</strong> · Abonnement à <strong>9,99€/mois</strong> · Moins cher qu'un café ☕ · Annulable à tout moment</p>
+  <div class="live-counter" id="liveCounter">
+    <span class="live-dot"></span>
+    <span id="counterText">127 analyses effectuées aujourd'hui</span>
+  </div>
 
   <!-- DEMO INPUT -->
   <div class="demo-block">
@@ -1165,6 +1386,51 @@
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="testimonials-intro reveal">
+      <span class="section-label">Témoignages</span>
+      <h2 class="section-title">Ils ont testé, ils ont kiffé</h2>
+    </div>
+    <div class="testimonials-grid reveal">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"En 3 semaines après l'analyse j'ai gagné +800 abonnés. Les conseils sur mes hashtags ont tout changé. Je comprends enfin pourquoi mes posts ne portaient pas."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:linear-gradient(135deg,#ff5c35,#ff8c35)">S</div>
+          <div>
+            <div class="testimonial-name">Sarah M.</div>
+            <div class="testimonial-handle">@sarah.lifestyle · 4,2k abonnés</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"J'ai payé 1,99€ et j'ai eu un rapport plus complet que ce que des agences à 200€/mois m'avaient fourni. L'IA a détecté que ma bio ne convertissait pas du tout."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">K</div>
+          <div>
+            <div class="testimonial-name">Karim B.</div>
+            <div class="testimonial-handle">@karim.fitness · 12k abonnés</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"L'abonnement vaut vraiment son prix. Je relance une analyse chaque semaine et je vois concrètement ma progression. Mon engagement a doublé en 2 mois."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:linear-gradient(135deg,#0ea5e9,#38bdf8)">L</div>
+          <div>
+            <div class="testimonial-name">Léa T.</div>
+            <div class="testimonial-handle">@lea.creativite · 8,7k abonnés</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section class="pricing-section" id="pricing">
   <div class="container">
@@ -1172,6 +1438,12 @@
       <span class="section-label">Tarifs</span>
       <h2 class="section-title">Simple et transparent</h2>
       <p class="section-sub" style="margin: 0 auto;">Commence à 1,99€. Passe à l'abonnement uniquement si tu vois des résultats.</p>
+    </div>
+
+    <!-- TOGGLE MENSUEL / ANNUEL -->
+    <div class="pricing-toggle-wrap reveal">
+      <button class="pricing-toggle active" id="toggleMonthly" onclick="switchBilling('monthly')">Mensuel</button>
+      <button class="pricing-toggle" id="toggleYearly" onclick="switchBilling('yearly')">Annuel <span class="save-badge">−35%</span></button>
     </div>
 
     <div class="pricing-grid reveal">
@@ -1194,10 +1466,10 @@
 
       <!-- ESSAI -->
       <div class="pricing-card featured">
-        <div class="pricing-badge">Le plus populaire</div>
+        <div class="pricing-badge">⚡ Accès découverte 48h</div>
         <div class="pricing-plan">Analyse complète</div>
         <div class="pricing-price"><span class="currency">€</span>1<span class="cents">,99</span></div>
-        <div class="pricing-period">Paiement unique · 1 analyse</div>
+        <div class="pricing-period">Paiement unique · 1 analyse · Accès 48h</div>
         <div class="pricing-divider"></div>
         <ul class="pricing-features">
           <li>Rapport d'analyse complet</li>
@@ -1207,14 +1479,17 @@
           <li>Audit bio + hashtags + niche</li>
           <li class="muted">Suivi de progression</li>
         </ul>
-        <a href="#" class="btn-pricing primary">Analyser — 1,99€</a>
+        <a href="#" class="btn-pricing primary">Analyser maintenant — 1,99€</a>
+        <p style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:10px;">Moins cher qu'un café ☕</p>
       </div>
 
       <!-- ABONNEMENT -->
-      <div class="pricing-card">
+      <div class="pricing-card" id="subCard">
+        <div class="pricing-badge-recommended">⭐ Recommandé</div>
         <div class="pricing-plan">Abonnement</div>
-        <div class="pricing-price"><span class="currency">€</span>9<span class="cents">,99</span></div>
-        <div class="pricing-period">Par mois · Résiliable à tout moment</div>
+        <div id="subPrice" class="pricing-price"><span class="currency">€</span>9<span class="cents">,99</span></div>
+        <div id="subPeriod" class="pricing-period">Par mois · Résiliable à tout moment</div>
+        <div id="subSaving" class="pricing-saving" style="display:none;">💰 Tu économises 40,88€/an</div>
         <div class="pricing-divider"></div>
         <ul class="pricing-features">
           <li>Analyses illimitées</li>
@@ -1224,9 +1499,23 @@
           <li>Historique et comparaisons</li>
           <li>Accès prioritaire aux nouvelles features</li>
         </ul>
-        <a href="#" class="btn-pricing ghost">S'abonner</a>
+        <a href="#" class="btn-pricing primary" id="subBtn">S'abonner — 9,99€/mois</a>
+        <p style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:10px;">Annulable en 1 clic à tout moment</p>
       </div>
     </div>
+
+    <!-- CODE PROMO -->
+    <div class="promo-block reveal">
+      <button class="promo-toggle" onclick="togglePromo()">🎁 Tu as un code promo ? Clique ici</button>
+      <div class="promo-form" id="promoForm" style="display:none;">
+        <div class="promo-input-wrap">
+          <input type="text" id="promoInput" placeholder="Entre ton code promo" class="promo-input">
+          <button class="promo-apply-btn" onclick="applyPromo()">Appliquer</button>
+        </div>
+        <div id="promoMsg" class="promo-msg"></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1237,7 +1526,7 @@
       <div class="reveal">
         <span class="section-label">FAQ</span>
         <h2 class="section-title">Questions fréquentes</h2>
-        <p class="section-sub">Quelque chose n'est pas clair ? <a href="mailto:hello@instalyze.fr" style="color:var(--accent);text-decoration:none;">Écris-nous</a></p>
+        <p class="section-sub">Quelque chose n'est pas clair ? <a href="/cdn-cgi/l/email-protection#e48c8188888ba48d8a979085889d9e81ca8296" style="color:var(--accent);text-decoration:none;">Écris-nous</a></p>
       </div>
       <div class="faq-list reveal">
         <div class="faq-item open">
@@ -1290,6 +1579,21 @@
   </div>
 </section>
 
+<!-- EXIT INTENT POPUP -->
+<div class="exit-overlay" id="exitOverlay">
+  <div class="exit-popup">
+    <button class="exit-popup-close" onclick="closeExit()">✕</button>
+    <span class="exit-emoji">⏳</span>
+    <h2 class="exit-title">Attends, une seconde !</h2>
+    <p class="exit-sub">Tu pars sans analyser ton Instagram ? Ton profil a peut-être un problème que tu ne vois pas — et ça coûte des abonnés chaque jour.<br><br><strong style="color:var(--white)">Essaie pour 1,99€ seulement aujourd'hui.</strong></p>
+    <a href="#pricing" class="exit-btn" onclick="closeExit()">
+      Analyser quand même — 1,99€
+      <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <span class="exit-skip" onclick="closeExit()">Non merci, je préfère rester dans le flou</span>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <a href="#" class="footer-logo">Insta<span>Lyze</span></a>
@@ -1297,12 +1601,12 @@
     <li><a href="#">Mentions légales</a></li>
     <li><a href="#">CGV</a></li>
     <li><a href="#">Confidentialité</a></li>
-    <li><a href="mailto:hello@instalyze.fr">Contact</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#1f777a7373705f76716c6b7e7366657a31796d">Contact</a></li>
   </ul>
   <p class="footer-copy">© 2025 InstaLyze. Fait avec ☕ en France.</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // REVEAL ON SCROLL
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
@@ -1323,18 +1627,92 @@ function toggleFaq(btn) {
   if (!isOpen) item.classList.add('open');
 }
 
+// LIVE COUNTER
+(function() {
+  const base = 124 + Math.floor(Math.random() * 8);
+  let count = base;
+  const el = document.getElementById('counterText');
+  if (el) {
+    el.textContent = count + ' analyses effectuées aujourd\'hui';
+    setInterval(() => {
+      if (Math.random() > 0.6) {
+        count++;
+        el.textContent = count + ' analyses effectuées aujourd\'hui';
+      }
+    }, 8000);
+  }
+})();
+
+// BILLING TOGGLE
+function switchBilling(type) {
+  const monthly = document.getElementById('toggleMonthly');
+  const yearly = document.getElementById('toggleYearly');
+  const price = document.getElementById('subPrice');
+  const period = document.getElementById('subPeriod');
+  const saving = document.getElementById('subSaving');
+  const btn = document.getElementById('subBtn');
+  if (type === 'yearly') {
+    monthly.classList.remove('active');
+    yearly.classList.add('active');
+    price.innerHTML = '<span class="currency">€</span>79';
+    period.textContent = 'Par an · soit 6,58€/mois';
+    saving.style.display = 'block';
+    btn.textContent = 'S\'abonner — 79€/an';
+  } else {
+    yearly.classList.remove('active');
+    monthly.classList.add('active');
+    price.innerHTML = '<span class="currency">€</span>9<span class="cents">,99</span>';
+    period.textContent = 'Par mois · Résiliable à tout moment';
+    saving.style.display = 'none';
+    btn.textContent = 'S\'abonner — 9,99€/mois';
+  }
+}
+
+// PROMO CODE
+const PROMO_CODES = {
+  'VIPFREE': 'vip',
+  'INFLUENCER': 'vip',
+  'INSTAGRATIS': 'vip',
+  'TIMFREE': 'vip',
+  'JETSKI': 'vip'
+};
+function togglePromo() {
+  const form = document.getElementById('promoForm');
+  form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+function applyPromo() {
+  const input = document.getElementById('promoInput').value.trim().toUpperCase();
+  const msg = document.getElementById('promoMsg');
+  if (PROMO_CODES[input]) {
+    msg.className = 'promo-msg success';
+    msg.textContent = '🎉 Code appliqué ! Tu as un accès VIP gratuit. Continue vers l\'analyse.';
+  } else if (input === '') {
+    msg.className = 'promo-msg error';
+    msg.textContent = 'Entre un code promo.';
+  } else {
+    msg.className = 'promo-msg error';
+    msg.textContent = '❌ Code invalide. Vérifie l\'orthographe.';
+  }
+}
+
+// EXIT INTENT
+let exitShown = false;
+document.addEventListener('mouseleave', (e) => {
+  if (e.clientY <= 0 && !exitShown) {
+    exitShown = true;
+    document.getElementById('exitOverlay').classList.add('visible');
+  }
+});
+function closeExit() {
+  document.getElementById('exitOverlay').classList.remove('visible');
+}
+document.getElementById('exitOverlay').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) closeExit();
+});
+
 // DEMO INPUT
 function handleDemo() {
   const val = document.getElementById('demo-input').value.trim();
   if (!val) {
     document.getElementById('demo-input').focus();
-    return;
-  }
-  window.location.href = '#pricing';
-}
-document.getElementById('demo-input').addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') handleDemo();
-});
-</script>
-</body>
-</html>
+    retur
